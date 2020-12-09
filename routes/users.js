@@ -22,7 +22,7 @@ router.get('/',cors.corsWithOptions, authenticate.verifyUser, authenticate.verif
 });
 
 router.post('/signup',cors.corsWithOptions,  (req, res, next) => {
-  User.register(new User({username: req.body.username}), 
+  User.register(new User({username: req.body.username, staffId: req.body.staffId}), 
   req.body.password, (err, user) =>{
     if(err) {
       res.statusCode = 500;

@@ -14,7 +14,12 @@ var User = new Schema({
     admin:   {
         type: Boolean,
         default: false
+    },
+    staffId: {
+        type: String,
+        required: true
     }
+
 });
 User.plugin(passportLocalMongoose);
 module.exports = mongoose.model('User', User);
