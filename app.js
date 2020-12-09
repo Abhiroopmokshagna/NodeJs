@@ -19,6 +19,7 @@ const memberRouter = require('./routes/memberrouter');
 const projectRouter = require('./routes/projectrouter');
 const patentRouter = require('./routes/patentrouter');
 const paperRouter = require('./routes/paperrouter');
+const categoryRouter = require('./routes/categoryrouter');
 
 const mongoose = require('mongoose');
 
@@ -70,6 +71,7 @@ app.use('/members',memberRouter);
 app.use('/projects',projectRouter);
 app.use('/patents',patentRouter);
 app.use('/papers',paperRouter);
+app.use('/category',categoryRouter);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
